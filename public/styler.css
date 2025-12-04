@@ -1,0 +1,11 @@
+img {
+  max-width: 50vh;
+  height: auto;
+  object-fit: fill;
+  display: flex;
+  flex-direction: column;
+}
+p {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
