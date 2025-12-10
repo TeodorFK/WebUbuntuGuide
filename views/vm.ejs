@@ -1,15 +1,100 @@
 <%- include('./partials/head.ejs') %> <%- include('./partials/header.ejs') %>
 <body>
-  <section>
+  <section class="guide">
     <div>
       <h2>Sette opp VM</h2>
       <p>
         For å sette opp en VM må du først gå in på Proxmoxen. Du kan skrive inn
-        ip adressen
+        ip adressen: 10.10.1.100:8006. Det kommer nok til å stå at det er en
+        usikker side men da må du bare gå videre ved å trykke på avansert og
+        fortsett til side
       </p>
-      <img src="/img/stage (1).png" alt="" />
-      <p></p>
-      <img src="/img/stage (2).png" alt="" />
+      <img src="/img/VM/stage (1).png" alt="" />
+      <p>
+        Etter du har loget in med brukernavn og passord skal du se dine
+        virituals machines. du har mest sansynelig ingen så det er ikek så
+        fårlig. Du skal se en blå knapp oppe til høyre. Det skal stå Create VM.
+        Du skal ikke trykke på Create CT.
+      </p>
+      <img src="/img/VM/stage (2).png" alt="" />
+      <p>
+        Når du har trykket på den skal du få en liten boks. Inne i boksen er det
+        noe som heter Resoure Pool og vedsiden av den er det en boks der du kan
+        legge in til pool. Du skal velge den poolen du har. Jeg har pool 05 og
+        heter computer så jeg velger 05-pool-computer poolen.
+      </p>
+      <img src="/img/VM/stage (3).png" alt="" />
+      <p>
+        På Node boxen velg "pve-backend". Det burde allerede være det men hvis
+        ikke velger du den eneste som du kan velge som burde være "pve-backend"
+      </p>
+      <img src="/img/VM/stage (4.1).png" alt="" />
+      <p>
+        Du må velge VM ID. Det kan være lurt å ha det strukturet. Jeg valgte 506
+        fordi jeg er pool 5 og fordi dette er min 6. VM jeg lager
+      </p>
+      <img src="/img/VM/stage (4).png" alt="" />
+      <img src="/img/VM/stage (4.2).png" alt="" />
+      <p>
+        Etter du har valgt VM ID må du velge et navn på VM. Det kan være lurt og
+        gi en navn for hva Vm skal gjøre. Dette er en guide så jeg kalte den
+        computer-guide. Fordi jeg heter computer
+      </p>
+      <img src="/img/VM/stage (4.3).png" alt="" />
+      <p>
+        Før du går videre kna det være lurt å checke advance button nede i høyre
+        hjørne
+      </p>
+      <img src="/img/VM/stage (4.4).png" alt="" />
+      <p>
+        Når du har skrivd in all information så må du bytte øverst fra "General"
+        til "OS". På "OS" trenger du bare å bytte ISO image til ubuntu sånn at
+        vi kan bruke Linux
+      </p>
+
+      <img src="/img/VM/stage (5).png" alt="" />
+      <p>
+        Gå fra "OS" til "Disk" gå ned til "Disk size (GiB)" boksen å velg 32
+        hvis det ikke er 32 allerede
+      </p>
+      <img src="/img/VM/stage (5.1).png" alt="" />
+      <p>
+        Etter du har gjort dette bytter du fra "Disk" til "CPU". Maxen du kan ha
+        på sockets er 4 og når du har 4 sockets er 8 maxen du kan ha på cores
+      </p>
+      <img src="/img/VM/stage (6).png" alt="" />
+      <p>
+        fra "Cpu" til "Memory". Da skal du se "Memory (MiB)" man kan velge sånn
+        ca 8000 så jeg valgte 8192. unner står det "Minimum memory (MiB)" da kan
+        du ta sånn ca halvparten
+      </p>
+      <img src="/img/VM/stage (7).png" alt="" />
+      <p>
+        Når du er ferdig med "Cpu" trykk på "Network". Du skal ikke gjøre noe på
+        network så trykk nede i høyre hjørne på next
+      </p>
+      <img src="/img/VM/stage (7.1).png" alt="" />
+      <p>
+        Når du har trykket på "next skal du være på "confirm" og se en stor
+        liste. Dette er specsa til din VM. Får å lage VM må du trykke på finish
+        button nede i høyre hjørne
+      </p>
+      <img src="/img/VM/stage (7.2).png" alt="" />
+      <p>
+        Når du trykka på finish button skal du bli tatt ut av den lille boksen å
+        se VM din på venstre side. Får å state VM din trykk først på VM din på
+        venstre side min er "506(teodor-guide)". Når du har trykket på den skal
+        du få enda en til liste som er litt til høyre for forige liste. Der skal
+        du trykke på den andre som står console. Når du har trykket på console
+        skal du se en stor button som står. "Start now" trykk på den så starter
+        den.
+      </p>
+      <img src="/img/VM/stage (8).png" alt="" />
+      <p>
+        Gå til ubuntu hvis du vil kunne lære å sette opp ubuntu programmvare på
+        VM'en
+      </p>
     </div>
   </section>
 </body>
+<%- include('./partials/footer.ejs') %>

@@ -10,13 +10,13 @@ const ubuntu = (req, res) => {
   res.render('ubuntu', { title: 'Ubuntu' });
 };
 
-const nginx = (req, res) => {
-  res.render('nginx', { title: 'nginx' });
+const node = (req, res) => {
+  res.render('node', { title: 'Node' });
 };
 
 module.exports = {
   index,
   vm,
   ubuntu,
-  nginx,
+  node,
 };

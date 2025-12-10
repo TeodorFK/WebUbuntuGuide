@@ -9,6 +9,6 @@ router.get('/vm', controller.vm);
 
 router.get('/ubuntu', controller.ubuntu);
 
-router.get('/nginx', controller.nginx);
+router.get('/node', controller.node);
 
 module.exports = router;
