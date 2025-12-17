@@ -1,0 +1,70 @@
+<%- include('./partials/head.ejs') %> <%- include('./partials/header.ejs') %>
+<body>
+  <section class="guide">
+    <div>
+      <h2>Node på Vm</h2>
+      <p>
+        Å kjøre Node i en virtuell maskin er veldig vanlig. Da kan du sette opp
+        et miljø som ligner på en ekte server. For eksempel kan du ha Ubuntu i
+        en VM, installere Node.js der, og kjøre prosjektet ditt som om det var i
+        produksjon. Dette er nyttig for testing, skoleprosjekter og læring om
+        serverdrift. Det gjør også at koden din oppfører seg likt uansett
+        hvilken PC du bruker.
+      </p>
+      <p>
+        Før du startet med vm må du kunne git pull og push. Linken er en
+        turorial på hvordan du gjør det.
+        <a href="https://www.datacamp.com/tutorial/git-push-pull">
+          https://www.datacamp.com/tutorial/git-push-pull</a
+        >
+      </p>
+      <hr />
+      <p>
+        Det er ikke nødvendig å bruke ssh men det kan være lettere. For å bruke
+        ssh må du åpne powershell. Du kan åpne powershell ved å søke etter det i
+        startmenyen. Du må ikke bruke administrator mode. Når du har åpnet
+        powershell må du skrive inn: SSH root@[ip adressen du har på VM]. For
+        meg er det:
+      </p>
+      <img src="img/node/vm/stage (1).png" alt="" />
+      <p>Last ned git sånn at man kan git clone prosjektet.</p>
+      <img src="img/node/vm/stage (2).png" alt="" />
+      <p>Last ned node sånn at du kan laste ned express får å runne serveren</p>
+      <img src="img/node/vm/stage (3).png" alt="" />
+      <p>
+        Når du skal laste ned express trenger du node. Istedet for å skrive sudo
+        apt install skriver du npm install
+      </p>
+      <img src="img/node/vm/stage (4).png" alt="" />
+      <p>
+        For å clone git må du gå in på github eller gitlab.
+        <a href="https://github.com/">https://github.com/</a> Gå inn i en
+        repository å finn den grønne knappen som står code
+      </p>
+      <section class="row">
+        <img src="img/node/vm/stage (5).png" alt="" />
+        <img src="img/node/vm/stage (6).png" alt="" />
+      </section>
+      <p>
+        Når du trykket på code skal du få en popup. I popupen kan du velge
+        mellom Http SSh og CLi. Velg https. Hvis du velger SSH må du ha ssh
+        keyen til vm inne i github
+      </p>
+      <p>Gå tilbake til terminalen og skriv git clone [http link]</p>
+      <img src="img/node/vm/stage (7).png" alt="" />
+      <p>Skriv in ls får å være sikker på at du klarte å clone prosjektet</p>
+      <img src="img/node/vm/stage (8).png" alt="" />
+      <p>Gå in på prosjekter med cd [mappe navn]</p>
+      <img src="img/node/vm/stage (9).png" alt="" />
+      <p>
+        Får å runne serveren skriver du node app.js. Du må skrive det inne i
+        mappen hvis ikke funker det ikke
+      </p>
+      <img src="img/node/vm/stage (10).png" alt="" />
+      <p>Får å sjekke om den funker skriver du inn VM ip-adressen og port</p>
+      <img src="img/node/vm/stage (11).png" alt="" />
+      <p></p>
+    </div>
+  </section>
+</body>
+<%- include('./partials/footer.ejs') %>

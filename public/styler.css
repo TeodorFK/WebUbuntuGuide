@@ -1,36 +1,52 @@
 body {
   font-family: Arial;
-  background-color: var(--second-color);
+  background-image: linear-gradient(
+    to bottom left,
+    var(--second-color),
+    #8aade6
+  );
   margin: 0;
+}
+hr {
+  background-color: var(--main-color);
+  height: 0.3vh;
+  border-radius: 0.2vh;
+  border: none;
 }
 header h1 {
   margin: 0;
   padding-left: 3vh;
   padding-top: 3vh;
 }
-nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  text-transform: uppercase;
-  margin-right: 10vh;
-}
-nav ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  list-style: none;
-  gap: 5vh;
-}
-nav a {
-  text-decoration: none;
-  color: var(--main-color);
-}
 .navbar {
   display: flex;
-  justify-content: space-between;
-  margin-left: 6vh;
-  margin-top: -1vh;
+  justify-content: right;
+  margin-right: 3vw;
+  gap: 2vw;
+}
+.navbar a {
+  transition-duration: 500ms;
+  font-size: large;
+  color: var(--main-color);
+}
+.navbar a:hover {
+  font-size: 1.5rem;
+  color: var(--main-color);
+}
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 9vw;
+  text-align: center;
+}
+.img img {
+  transition-duration: 500ms;
+  margin-top: 10vh;
+  max-width: 15vw;
+}
+.img img:hover {
+  max-width: 22vw;
 }
 .guide {
   display: flex;
@@ -49,13 +65,59 @@ img {
   border-radius: 1vh;
 }
 .guide p {
-  margin-top: 10vh;
-  margin-bottom: 2vh;
-  max-width: 120vh;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  max-width: 100vh;
+  margin-left: 8.5vh;
+  color: var(--main-color);
+}
+#top {
+  display: flex;
+  border: none;
+  background: none;
+  outline: none;
+  cursor: pointer;
+  bottom: 2vh;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5vw;
+}
+.row img {
+  max-width: 30vw;
+  object-fit: contain;
+}
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.links img {
+  max-width: 15vw;
+}
+.links a {
+  display: inline-block;
+  transition-duration: 500ms;
+}
+.links a:hover {
+  gap: 1vw;
+  scale: 1.2;
+}
+.begrep {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+a {
+  text-decoration: none;
   color: var(--main-color);
 }
 footer {
-  background: #ffffff;
+  background: var(--third-color);
   opacity: 0.8;
   padding: 2vh 0;
   text-align: center;
@@ -83,4 +145,5 @@ footer h5 {
 :root {
   --main-color: #171717;
   --second-color: #e0f4ff;
+  --third-color: #ffffff;
 }

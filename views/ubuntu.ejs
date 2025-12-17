@@ -3,48 +3,135 @@
   <section class="guide">
     <div>
       <h2>Fikse Ubuntu</h2>
+      <p>
+        Ubuntu er et populært Linux operativsystem. Det er gratis, stabilt og
+        mye brukt på servere og i utvikling. Ubuntu passer veldig godt i
+        virtuelle maskiner fordi det er lett å installere og krever lite
+        ressurser. Mange backend prosjekter og servere kjører Ubuntu siden det
+        er sikkert og godt støttet.
+      </p>
+      <hr />
+      <p>
+        Når du har åpnet konsollen i Proxmox, starter du VM-en ved å trykke på
+        Start now. Det kan ta litt tid før Ubuntu-installasjonen lastes inn, så
+        vent til første skjermbilde dukker opp.
+      </p>
+      <img src="/img/VM/stage (8).png" alt="" />
+      <p>
+        Det første du ser er en skjerm der du velger språk. Dette er språket
+        installasjonsprogrammet skal bruke. Velg det språket du foretrekker. Jeg
+        valgte engelsk.
+      </p>
       <img src="/img/Ubuntu/stage (9).png" alt="" />
-      <p></p>
+      <p>
+        Når du har valgt språk, kommer du videre til et valg for tastatur. Hvis
+        du er usikker på hvilket tastaturoppsett du har, kan du bruke Identify
+        keyboard. Hvis du allerede vet det, kan du gå direkte inn i Layout og
+        velge riktig oppsett. Når du er ferdig, trykker du Done for å gå videre.
+      </p>
       <img src="/img/Ubuntu/stage (10).png" alt="" />
-      <p></p>
+      <p>
+        På neste side kan du trykke U på tastaturet for å velge standard
+        Ubuntu-installasjon. Følg instruksjonene som vises, så går du videre til
+        neste trinn.
+      </p>
       <img src="/img/Ubuntu/stage (11).png" alt="" />
-      <p></p>
+      <p>
+        Deretter kommer du til en side med noen valg du ikke trenger å endre.
+        Her kan du trykke på den grønne Done-knappen nederst for å fortsette.
+      </p>
       <img src="/img/Ubuntu/stage (12).png" alt="" />
-      <p></p>
-      <img src="/img/Ubuntu/stage (13).png" alt="" />
-      <p></p>
-      <img src="/img/Ubuntu/stage (14).png" alt="" />
-      <p></p>
+      <p>
+        Neste steg er viktig. Du kommer til siden for nettverkskonfigurasjon.
+        Trykk på ens18 eth for å åpne innstillingene. Det dukker opp en liten
+        meny der du velger Edit IPv4.
+      </p>
+      <section class="row">
+        <img src="/img/Ubuntu/stage (13).png" alt="" />
+        <img src="/img/Ubuntu/stage (14).png" alt="" />
+      </section>
+      <p>
+        I vinduet som åpner seg, står IPv4 som Disabled. Endre dette til Manual
+        slik at du kan skrive inn dine egne nettverksinnstillinger.
+      </p>
       <img src="/img/Ubuntu/stage (15).png" alt="" />
-      <p></p>
+      <p>
+        Når du har valgt Manual, får du flere felt du skal fylle ut. Skriv inn
+        følgende med dine egne pool-numre:
+      </p>
       <img src="/img/Ubuntu/stage (16).png" alt="" />
-      <p></p>
-      <img src="/img/Ubuntu/stage (17).png" alt="" />
-      <p></p>
+      <div></div>
+      <p>
+        Subnett: 10.12.[din pool].0/24 <br />
+        Adress: 10.12.[din pool].[1-255] <br />
+        Gateway: 10.12.[din pool].1 <br />
+        Name server: 10.10.1.30, 1.1.1.1 (cloudflare) <br />
+        <br />
+        <br />
+        Du trenger ikke å fylle ut Search Domains. Når alt er lagt inn, trykker
+        du Save. Deretter trykker du Continue for å gå til neste side. Denne
+        siden trenger du ikke gjøre noe med, så trykk Done igjen.
+      </p>
       <img src="/img/Ubuntu/stage (18).png" alt="" />
-      <p></p>
+      <p>
+        På neste side venter du litt. Installereren jobber i bakgrunnen, og når
+        det står Hit i boksen, kan du fortsette ved å trykke Done nederst.
+      </p>
       <img src="/img/Ubuntu/stage (19).png" alt="" />
-      <p></p>
+      <p>Deretter kommer du til en ny side du bare kan gå forbi. Trykk Done</p>
       <img src="/img/Ubuntu/stage (20).png" alt="" />
-      <p></p>
+      <p>
+        Videre får du opp storage-konfigurasjonen. Her trenger du heller ikke å
+        gjøre endringer, så du kan trykke Done nederst.
+      </p>
       <img src="/img/Ubuntu/stage (21).png" alt="" />
-      <p></p>
+      <p>
+        Du får nå en popup som ber om bekreftelse. Trykk Continue for å
+        godkjenne endringene.
+      </p>
       <img src="/img/Ubuntu/stage (22).png" alt="" />
-      <p></p>
+      <p>
+        Neste del handler om brukeren din. Du må skrive inn Name, Username og
+        Server name. Name og Username kan med fordel være det samme, og gjerne
+        navnet ditt eller brukernavnet du vanligvis bruker. Server name er
+        navnet selve VM-en vil få. Velg også et passord du kommer til å huske.
+      </p>
       <img src="/img/Ubuntu/stage (23).png" alt="" />
-      <p></p>
+      <p>
+        Dette er det jeg skrev. Jeg burde egentlig tatt computer. Når du har
+        lagt inn alt trykk på "Done"
+      </p>
       <img src="/img/Ubuntu/stage (24).png" alt="" />
-      <p></p>
+      <p>
+        På den neste siden trenger du ikke å aktivere noe, så du kan igjen
+        trykke Done.
+      </p>
       <img src="/img/Ubuntu/stage (25).png" alt="" />
-      <p></p>
+      <p>
+        Når du kommer til siden med valget om OpenSSH server, er det lurt å
+        aktivere Install OpenSSH server. Dette gjør at du senere kan koble deg
+        til VM-en via for eksempel PowerShell på din egen PC. Når du har valgt
+        det, trykker du Done.
+      </p>
       <img src="/img/Ubuntu/stage (26).png" alt="" />
-      <p></p>
+      <p>
+        Deretter kan du gå videre gjennom den neste siden ved å trykke Done
+        igjen
+      </p>
       <img src="/img/Ubuntu/stage (27).png" alt="" />
-      <p></p>
-      <img src="/img/Ubuntu/stage (28).png" alt="" />
-      <p></p>
-      <img src="/img/Ubuntu/stage (29).png" alt="" />
-      <p></p>
+      <p>
+        Installasjonen starter nå for alvor. Dette tar noen minutter. Vent til
+        installereren viser en knapp nederst der det står Reboot now. Trykk på
+        denne for å starte VM-en på nytt.
+      </p>
+      <section class="row">
+        <img src="/img/Ubuntu/stage (28).png" alt="" />
+        <img src="/img/Ubuntu/stage (29).png" alt="" />
+      </section>
+      <p>
+        Når VM-en har restartet, vil den be deg trykke Enter. Når du gjør det,
+        fullfører VM-en oppstarten og tar deg videre til Ubuntu.
+      </p>
       <img src="/img/Ubuntu/stage (30).png" alt="" />
       <p></p>
     </div>

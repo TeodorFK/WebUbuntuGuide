@@ -1,0 +1,76 @@
+<%- include('./partials/head.ejs') %> <%- include('./partials/header.ejs') %>
+<body>
+  <section class="guide">
+    <div>
+      <h2>Node Utvikling</h2>
+      <p>
+        Node.js lar deg kjøre JavaScript utenfor nettleseren. Det brukes ofte
+        til backend utvikling, for eksempel APIer, autentisering og databaser.
+        Med Node kan du bruke JavaScript både i frontend og backend. Typiske
+        verktøy i Node utvikling er Express, npm, MongoDB og JWT. Node er raskt
+        og passer godt til apper som håndterer mange forespørsler.
+      </p>
+      <hr />
+      <p>
+        Gå inn på vscode. Vscode har allerede node lastet ned så du trenger ikke
+        å laste det ned. Gå inn i terminalen. Trykk på de tre prikkene øverst
+        til venstre og hover over terminal. Lag ny terminal. Man kan også lage
+        en ny terminal med Ctrl+Shift+ø
+      </p>
+      <img src="img/node/local/stage (0).png" alt="" />
+      <p>
+        Vi kan engentlig skrive npm install express nodemon ejs. Men vi tar det
+        steg for steg. Når du laster ned filene får du en mappe som heter
+        node_modules og noen filer som package-lock.json og package.json
+      </p>
+      <img src="img/node/local/stage (1).png" alt="" />
+      <p>
+        Når du laster ned express med npm install express kommandoen laster den
+        det ned i node_modules. Express gjør at det er lett og enkelt og lage en
+        servere i node. Uten express må man skrive mye mere.
+      </p>
+      <img src="img/node/local/stage (2).png" alt="" />
+      <p>
+        Nodemon hjelper deg med serveren. Den passer på å restarte serveren din
+        automatisk hver gang du lager noe nytt i koden. Uten nodemon blir må du
+        stopp eog restarte den hele tiden du gjør en endring
+      </p>
+      <img src="img/node/local/stage (3).png" alt="" />
+      <p>
+        Ejs står for "Embedded Javascript". Den gjør at du kan bruke javascript
+        directe inne i html
+      </p>
+      <img src="img/node/local/stage (4).png" alt="" />
+      <p>requrie henter Express pakken.</p>
+      <img src="img/node/local/stage (5).png" alt="" />
+      <p>
+        Når du skriver const app = express() så gjør du at du kan lage routes og
+        sette opp middleware og starte serveren
+      </p>
+      <img src="img/node/local/stage (6).png" alt="" />
+      <p>Dette gjør at alle views skal bruke ejs.</p>
+      <img src="img/node/local/stage (7).png" alt="" />
+      <p>
+        Dette gjør at du kan starte serveren din. Da lytter den til port 3000.
+        Det betyr at du gå til localhost:3000 for å kunne se hva du har laget.
+        Console.log() sier om du har klart og koble til port 3000
+      </p>
+      <img src="img/node/local/stage (8).png" alt="" />
+      <p>
+        Når du har skriver inn nodemon app.js så starter serveren. Da går du i
+        browseren din å søker på localhost:3000
+      </p>
+      <img src="img/node/local/stage (9).png" alt="" />
+      <p>
+        Dette er en liten extra men du kan gå i package.json i vscode å bla til
+        du finner scripts. under test skriv "start": "nodemon app.js". Dette
+        gjør at du kan skrive npm start istedet for nodemon app.js
+      </p>
+      <img src="img/node/local/stage (10).png" alt="" />
+      <p>Nå kan du skrive npm start istedet for nodemon app.js</p>
+      <img src="img/node/local/stage (11).png" alt="" />
+      <p></p>
+    </div>
+  </section>
+</body>
+<%- include('./partials/footer.ejs') %>

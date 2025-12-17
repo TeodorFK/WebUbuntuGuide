@@ -5,7 +5,9 @@ const app = express();
 
 app.set('view engine', 'ejs');
 
-app.listen(3000);
+app.listen(3000, () => {
+  console.log('connected to localhost');
+});
 
 app.use(express.static('public'));
 
